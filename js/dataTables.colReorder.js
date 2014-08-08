@@ -206,7 +206,7 @@ $.fn.dataTableExt.oApi.fnColReorder = function ( oSettings, iFrom, iTo )
 			oCol.mData = aiInvertMapping[ oCol.mData ];
 
 			// regenerate the get / set functions
-			oSettings.oApi._fnColumnOptions( oSettings, i, {} );
+			oSettings.oApi._fnColumnOptions( oSettings, i, {}, true );
 		}
 		else if ( $.isPlainObject( oCol.mData ) ) {
 			// HTML5 data sourced
@@ -216,7 +216,7 @@ $.fn.dataTableExt.oApi.fnColReorder = function ( oSettings, iFrom, iTo )
 			attrMap( oCol.mData, 'type',   aiInvertMapping );
 
 			// regenerate the get / set functions
-			oSettings.oApi._fnColumnOptions( oSettings, i, {} );
+			oSettings.oApi._fnColumnOptions( oSettings, i, {}, true );
 		}
 	}
 
